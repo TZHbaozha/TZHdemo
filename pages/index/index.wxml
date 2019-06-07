@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<scroll-view class="scroll_view" scroll-x="true">
+<swiper class="swiper" autoplay="true" duration="2000">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item class="image_item">
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+</swiper>
+</scroll-view>
+<view class="content">
+  <view class="btn_order" bindtap="bindViewTap">
+    <text>{{ btn_order }}</text>
+    <image src="/images/buy.png"></image>
+  </view>
+  <view class="rec">
+    <text>{{ rec }}</text>
+    <image src="/images/rec.png"></image>
+  </view>
+  <view class="pre">
+    <text>{{ pre }}</text>
+    <image src="/images/pre.png"></image>
+  </view>
+</view>
+
+
+

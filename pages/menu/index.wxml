@@ -1,0 +1,51 @@
+<view class="packag">
+  <view class="title">
+    <text class="local">此处显示地理位置</text>
+    <view class="dis"><text>距离你xxx多少米</text></view>
+    <view class="qutside">按钮</view>
+    <image src="/images/loca.png"></image>
+  </view>
+  <view class="adv">
+    <image
+      src="https://images.pexels.com/photos/984539/pexels-photo-984539.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      mode="center"
+    ></image>
+  </view>
+
+  <view class="conter">
+    <view class="nav">
+      <block wx:for="{{ nav_container }}" wx:key="">
+        <view class="nav_left" bindtap="change" data-id="{{ index }}">
+          <view class="nav_select" wx:if="{{ navId == index }}"><text>{{ item }}</text></view>
+          <view wx:else><text>{{ item }}</text></view>
+        </view>
+      </block>
+    </view>
+    <view class="list">
+        <view class="bar">
+            <view class="prompt">{{ prompt }}</view>
+            <view class="line"></view>
+        </view>
+        <scroll-view class="scroll_box" scroll-y="true" scroll-top="{{ 0 }}" style="height:100%;" bindscrolltolower="lower">
+            <view wx:for="{{ Milk_tea.container }}" wx:key="">
+            <view class="image_list">
+                <view class="image_box">
+                    <image></image>
+                </view>
+                <view class="des">
+                    <view class="image_name">{{ item.name }}</view>
+                    <view class="price"><text>$</text><text>{{ item.price }}</text></view>
+                </view>
+                
+                <view wx:if="{{ cratArr[index] > 0}}">
+                  <view id="reduc_btn" bindtap="reduc" data-id="{{ index }}"><text>-</text></view>
+                  <view class="cart_num"><text>{{ cratArr[index] }}</text></view>
+                </view>
+                <view id="add_btn" bindtap="addgoods" data-id="{{ index }}"><text>+</text></view>
+            </view>
+            </view>
+        </scroll-view>
+        
+    </view>
+  </view>
+</view>

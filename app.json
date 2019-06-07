@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/menu/index",
+    "pages/order/index",
+    "pages/cart/index",
+    "pages/people/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "自助订餐",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#312E4F",
+    "backgroundColor" : "#fafafa",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"/images/home.png",
+      "selectedIconPath":"/images/home-active.png"
+    }, {
+      "pagePath": "pages/menu/index",
+      "text": "菜单",
+      "iconPath":"/images/menu.png",
+      "selectedIconPath":"/images/menu-active.png"
+    },{
+      "pagePath": "pages/order/index",
+      "text": "订单",
+      "iconPath":"/images/order.png",
+      "selectedIconPath":"/images/order-active.png"
+    },{
+      "pagePath": "pages/cart/index",
+      "text": "购物车",
+      "iconPath":"/images/cart.png",
+      "selectedIconPath":"/images/cart-active.png"
+    },{
+      "pagePath": "pages/people/index",
+      "text": "我的",
+      "iconPath":"/images/me.png",
+      "selectedIconPath":"/images/me-active.png"
+    }]
+  }
+  
+}

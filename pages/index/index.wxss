@@ -1,0 +1,34 @@
+/**index.wxss**/
+
+.swiper{
+  width:100%;
+  height:488rpx;
+}
+.slide-image{
+  width:100%;
+  height:488rpx;
+}
+.content{
+   display: flex;
+   flex-direction: column;
+   width:100%;
+   height:488rpx;
+}
+.content view{
+    position: relative;
+    width:90%;
+    height:160rpx;
+    margin: 0rpx auto;
+    font-size: 33rpx;
+    font-weight: bold;
+    color:#333333 ;
+    line-height: 160rpx;
+    border-bottom: 2rpx solid #C5C8CC;
+}
+.content view image{
+  position: absolute;
+  top : 47rpx;
+  right:0;
+  width:66rpx;
+  height:66rpx;
+}

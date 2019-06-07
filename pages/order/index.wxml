@@ -1,0 +1,21 @@
+<view class="order_prompt">
+  <text>查看订单详情</text>
+</view>
+<view class="order_container">
+  <view class="order_left"></view>
+  <view class="order_list">
+    <view class="order_num"><text>自提订单 :</text><text>{{ 8907306030 }}</text><text>已完成</text></view>
+      <view class="location"><text>南湖市场店</text><text>343434343434</text></view>
+      <view class="goods_total">原味奶茶等 <text>共{{ 3 }}件商品</text></view>
+      <view class="total_price">￥{{ 66 }}</view>
+  </view>
+</view>
+<view class="order_container">
+  <view class="order_left"></view>
+  <view class="order_list">
+    <view class="order_num"><text>自提订单 :</text><text>{{ 8907306030 }}</text><text>已完成</text></view>
+      <view class="location"><text>南湖市场店</text><text>343434343434</text></view>
+      <view class="goods_total">原味奶茶等 <text>共{{ 3 }}件商品</text></view>
+      <view class="total_price">￥{{ 66 }}</view>
+  </view>
+</view>

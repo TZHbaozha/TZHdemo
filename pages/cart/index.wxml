@@ -1,0 +1,36 @@
+<view wx:if="{{ cratArr == null || total_num == 0 }}">
+      <view class="contai">
+          <image src="/images/goods.png"></image>
+          <view class="Dobuy">您还没购买商品</view>
+          <view class="travel" bindtap="bindViewTap">来一份</view>
+      </view>
+</view>
+<view wx:else>
+  <view wx:for="{{ cratArr }}">
+    <view wx:if="{{ item > 0 }}">
+        <view class="cart_list">
+            <view class="controls">
+              <view class="controls_btn"></view>
+            </view>
+            <view class="cart_infor">
+              <view class="cart_des">
+                <text>{{ crat_list[index].name }}</text>
+                <text>大/少糖/热</text>
+                <text class="cart_price">￥<text>{{ crat_list[index].price * item }}</text></text>
+              </view>
+              <view class="add_reduce">
+                <view id="reduc_btn" bindtap="reduce_num" data-id="{{ index }}">-</view>
+                <view class="num">{{ item }}</view>
+                <view id="add_btn" bindtap="add_num" data-id="{{ index }}">+</view>
+              </view>
+            </view>
+          </view>
+        </view>
+    </view>
+</view>
+
+  
+<view class="settlement">
+    <view class="com"><text>应付合计</text><text>￥{{ total_num == null ? 0 : total_num }}</text></view>
+    <view class="invoicing">去结算</view>
+</view>

@@ -10,7 +10,7 @@
     <view wx:if="{{ item > 0 }}">
         <view class="cart_list">
             <view class="controls">
-              <view class="controls_btn"></view>
+              <t-tick></t-tick>
             </view>
             <view class="cart_infor">
               <view class="cart_des">
@@ -32,5 +32,5 @@
   
 <view class="settlement">
     <view class="com"><text>应付合计</text><text>￥{{ total_num == null ? 0 : total_num }}</text></view>
-    <view class="invoicing">去结算</view>
+    <view class="invoicing" bindtap="invoicing">去结算</view>
 </view>

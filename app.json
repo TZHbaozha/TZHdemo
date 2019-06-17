@@ -4,7 +4,9 @@
     "pages/menu/index",
     "pages/order/index",
     "pages/cart/index",
-    "pages/people/index"
+    "pages/people/index",
+    "pages/confirm/index"
+    
   ],
   "window":{
     "backgroundTextStyle":"dark",

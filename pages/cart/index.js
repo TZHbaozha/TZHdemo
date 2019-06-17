@@ -55,6 +55,13 @@ Page({
       }
     })
   },
+
+  invoicing:function(e){
+    wx.navigateTo({
+      url:'../confirm/index'
+    })
+  },
+
   onShow: function() {
     var self = this;
     wx.getStorage({
@@ -88,6 +95,10 @@ Page({
         key: "crat",
         data: crat
       });
+
+      wx.removeStorage({
+        key: 'cargo'
+      })
     }
   }
 });

@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "t-tick" : "/component/tick/index"
+  }
 }

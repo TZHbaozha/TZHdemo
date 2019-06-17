@@ -1,0 +1,13 @@
+.tick_play{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:38rpx;
+    height:38rpx;
+    border:1rpx solid #89AFD6;
+    border-radius: 50%;
+}
+.tick_play image{
+    width:100%;
+    height:100%;
+}

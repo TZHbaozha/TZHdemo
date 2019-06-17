@@ -1,0 +1,6 @@
+.tick_round{
+    width:38rpx;
+    height:38rpx;
+    border:1rpx solid #666;
+    border-radius: 50%;
+}

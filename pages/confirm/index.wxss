@@ -1,0 +1,223 @@
+.title{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height:145rpx;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 8rpx solid #F6F6F6;
+}
+.title .lift{
+    width:170rpx;
+    height:66rpx;
+    border:1rpx solid #7CA7D2;
+    border-radius: 33rpx;
+    line-height: 66rpx;
+    text-align: center;
+    color: #7CA7D2;
+    font-size: 27rpx;
+    margin-left: 20rpx;
+}
+.title .make_food{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right:20rpx;
+}
+.title .make_food .immediately{
+    font-size: 28rpx;
+    color:#202020;
+    font-weight: bold;
+} 
+.title .time_text{
+    margin-top:10rpx;
+}
+.title .make_food .time_text text:nth-of-type(1){
+    font-size: 27rpx;
+    color:#7E7E7E
+}
+.title .make_food .time_text text:nth-of-type(2){
+    font-size: 45rpx;
+    color:#81A4C8
+}
+.title .make_food .time_text text:nth-of-type(3){
+    font-size: 27rpx;
+    color:#7E7E7E
+}
+.details{
+    width:100%;
+}
+.details .stores{
+    font-size: 28rpx;
+    font-weight: bold;
+    margin:0 0 20rpx 20rpx;
+}
+.details .stores_location{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details .stores_location .location{
+    margin-left: 20rpx;
+}
+.details .stores_location .location .locat{
+    font-size: 35rpx;
+}
+.details .stores_location .location .specific_locat{
+    font-size: 25rpx;
+    color:#717171;
+}
+.details .Angle_brackets{
+    font-size: 35rpx;
+    color: #C8C8C8;
+    margin-right:10rpx;
+}
+.Packaged_container{
+    width:100%;
+    height:170rpx;
+    border-top:1rpx solid #F0F0F0;
+    border-bottom: 1rpx solid #F0F0F0;
+    margin:20rpx 0 20rpx 0;
+}
+.Packaged_meals{
+    display: flex;
+    justify-content: space-around;
+    width:80%;
+    height:100%;
+    margin:0 auto;
+}
+.Packaged_meals .dining,.packaging{
+    display: flex;
+    width:180rpx;
+    font-size: 28rpx;
+    justify-content: space-between;
+    align-items: center;
+}
+.order{
+    width:100%;
+    height:180rpx;
+    border-bottom: 1rpx solid #F0F0F0;
+}
+.order .informa{
+    height:60rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+    margin-left: 20rpx;
+    line-height: 60rpx;
+}
+.order .order_price{
+    display: flex;
+    width:100%;
+    justify-content:space-between;
+    margin-top:15rpx;
+}
+.order_price .goods_name{
+    margin-left: 20rpx;
+}
+.order_price .goods_name view:nth-of-type(1){
+    font-size: 32rpx;
+    font-weight: bold;
+}
+.order_price .goods_name view:nth-of-type(2){
+    font-size: 23rpx;
+    font-weight: lighter;
+}
+.order_price .num_price{
+    width:200rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right:20rpx;
+}
+.order_price .num_price text:nth-of-type(1){
+    font-size: 28rpx;
+}
+.order_price .num_price text:nth-of-type(2){
+    font-size: 29rpx;
+    font-weight: bold;
+}
+.sum_pricw{
+    width:100%;
+    height:100rpx;
+    border-bottom:8rpx solid #F6F6F6;
+    text-align: right;
+    line-height: 100rpx;
+}
+.sum_pricw view{
+    margin-right:20rpx;
+}
+.sum_pricw text:nth-of-type(1){
+    font-size: 30rpx;
+    margin-right:10rpx;
+}
+.sum_pricw text:nth-of-type(2){
+    font-size: 35rpx;
+    font-weight: bold;
+}
+.note{
+    width:100%;
+}
+.coupons,.requirements{
+    display: flex;
+    justify-content: space-between;
+    height:90rpx;
+    border-bottom:1rpx solid #F0F0F0;
+}
+.coupons text:nth-of-type(1),.requirements text:nth-of-type(1){
+    font-size: 28rpx;
+    margin-left: 20rpx;
+    line-height: 90rpx;
+}
+.coupons text:nth-of-type(2),.requirements text:nth-of-type(2){
+    margin-right: 20rpx;
+    line-height: 90rpx;
+    color:#C8C8C8;
+}
+
+
+
+
+
+
+
+
+
+.pay_sum{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    height:110rpx;
+    bottom:0;
+}
+.pay_sum .prepare{
+    display: flex;
+    height:100%;
+    align-items: center;
+    margin-left: 20rpx;
+}
+.pay_sum .prepare text:nth-of-type(1){
+    margin-right:0;
+    padding-right:0;
+    font-size: 28rpx;
+    margin-right:10rpx;
+}
+
+.pay_sum .prepare text:nth-of-type(2){
+    font-size: 45rpx;
+    font-weight: bold;
+    margin-left:10rpx;
+}
+.pay_sum .pay{
+    width:268rpx;
+    height:100%;
+    text-align: center;
+    line-height: 120rpx;
+    background-color: #6D93B9;
+    border-radius: 5rpx;
+    color: #fff;
+}

@@ -1,6 +1,0 @@
-<view wx:if="{{ numArr >  0 }}">
-  <view id="reduc_btn" class="reduc_btn" bindtap="reduc" ><text>-</text></view>
-  <view class="cart_num"><text>{{ numArr }}</text></view>
-</view>
-<view id="add_btn" class="add_btn" bindtap="addgoods"><text>+</text>
-</view>

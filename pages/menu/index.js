@@ -1,5 +1,6 @@
-var app = getApp();
-var in_dec = require('../in_dec/index')
+const app = getApp();
+const in_dec = require('../../public/indec')
+const init = require('../../public/init')
 Page({
   data: {
     nav_container: [
@@ -16,38 +17,10 @@ Page({
     prompt: "人气Top",
     navId: 0,
     cratArr: null,
-    Milk_tea: {
-      container: [
-        {
-          name: "原味奶茶",
-          price: 10
-        },
-        {
-          name: '柠檬茶',
-          price : 6
-        },
-        {
-          name: '芒果冰',
-          price : 8
-        },
-        {
-          name: '蓝莓冰沙',
-          price : 12
-        },
-        {
-          name: '可乐',
-          price : 12
-        },
-        {
-          name: '东鹏',
-          price : 12
-        },
-        {
-          name: '王老吉',
-          price : 12
-        },
-      ]
-    }
+    Milk_tea: null,
+    middleArr : null,
+    a : null,
+    b : null
   },
 
   change: function(e) {
@@ -58,42 +31,72 @@ Page({
     });
   },
   addgoods: function(e) {
-    in_dec(e,this.data.cratArr,'cratArr',this);
+    in_dec(e, this.data.cratArr,'cratArr',this);
   },
   reduc: function(e) {
-    in_dec(e,this.data.cratArr,'cratArr',this);
+      in_dec(e, this.data.cratArr,'cratArr',this);
   },
 
   onLoad: function() {
-    var arr = [];
-    for (var i = 0; i < this.data.Milk_tea.container.length; i++) {
-      arr[i] = 0;
-    }
-    this.setData({
-      cratArr: arr
-    });
-  },
-  onShow:function(){
-    var self = this
-    wx.getStorage({
-      key: "crat",
-      success:function(res){
-        
-        self.setData({
-          cratArr :res.data.crat_arr
+    const db = wx.cloud.database()
+    db.collection('test').doc('5d12d05e010f117faf22ef7a').get({
+      success : (res)=>{
+        const arr = init(res.data.container)
+        this.setData({
+          cratArr: arr,
+          Milk_tea: res.data.container,
         })
       }
     })
   },
 
+  onShow:function(options){
+    if (app.globalData.flag) {
+      const arr = init(this.data.Milk_tea)
+      this.setData({
+        cratArr: arr
+      })
+      app.globalData.flag = false
+    }else{
+      wx.getStorage({
+        key: "crat",
+        success: (res) => {
+          const crat_arr = res.data.crat_arr + ''
+          const cratArr = this.data.cratArr + ''
+          this.setData({
+            cratStr: crat_arr
+          }) 
+          if (crat_arr == cratArr){
+            console.log('菜单不获取缓存')
+            return 
+          }else{
+            console.log('菜单获取缓存')
+            this.setData({
+              cratArr: res.data.crat_arr,
+            })
+          }
+        }
+      })
+    }   
+  },
+
   onHide: function(options) {
-    var cargo = {
-      crat_arr: this.data.cratArr,
-      Milk_arr:this.data.Milk_tea.container
-    };
-    wx.setStorage({
-      key: "cargo",
-      data: cargo
-    });
+    const str = this.data.cratArr + ''
+    console.log(this.data.cratStr, str  +"菜单")
+    if (this.data.cratStr != str){
+      console.log('菜单设置缓存')
+      var cargo = {
+        crat_arr: this.data.cratArr,
+        Milk_arr: this.data.Milk_tea
+      };
+      wx.setStorage({
+        key: "cargo",
+        data: cargo
+      });
+    }
+
+    wx.removeStorage({
+      key: "crat"
+    })
   }
 });

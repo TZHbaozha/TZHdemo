@@ -1,7 +1,7 @@
 <view class="packag">
   <view class="title">
     <text class="local">此处显示地理位置</text>
-    <view class="dis"><text>距离你xxx多少米</text></view>
+    <view class="dis"><text>距离您xxx多少米</text></view>
     <view class="qutside">按钮</view>
     <image src="/images/loca.png"></image>
   </view>
@@ -27,10 +27,10 @@
             <view class="line"></view>
         </view>
         <scroll-view class="scroll_box" scroll-y="true" scroll-top="{{ 0 }}" style="height:100%;" bindscrolltolower="lower">
-            <view wx:for="{{ Milk_tea.container }}" wx:key="">
+            <view wx:for="{{ Milk_tea }}" wx:key="">
             <view class="image_list">
                 <view class="image_box">
-                    <image></image>
+                    <image src="/images/food.jpg"></image>
                 </view>
                 <view class="des">
                     <view class="image_name">{{ item.name }}</view>
@@ -38,10 +38,11 @@
                 </view>
                 
                 <view wx:if="{{ cratArr[index] > 0}}">
-                  <view id="reduc_btn" bindtap="reduc" data-id="{{ index }}"><text>-</text></view>
+                  <view id="reduc_btn" bindtap="reduc" data-id="{{ index }}"><image src='/images/reduc.png'/></view>
                   <view class="cart_num"><text>{{ cratArr[index] }}</text></view>
-                </view>
-                <view id="add_btn" bindtap="addgoods" data-id="{{ index }}"><text>+</text></view>
+                </view>        
+                 <view id="add_btn" bindtap="addgoods" data-id="{{ index }}"><image src='/images/add.png'/></view>
+               
             </view>
             </view>
         </scroll-view>

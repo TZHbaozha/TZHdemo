@@ -1,6 +1,16 @@
-//app.js
+
 App({
   onLaunch: function() {
+    if(!wx.cloud){
+      console.log('请使用2.2.3 或者以上的版本基础库')
+    }else{
+      console.log('初始化成功')
+      wx.cloud.init({
+        traceUser : true,
+        env : 'test-0ff666'
+      })
+    }
+
     wx.removeStorage({
       key: 'cargo',
       success (res) {
@@ -40,6 +50,6 @@ App({
     });
   },
   globalData: {
-    userInfo: null
+    flag: false
   }
 });

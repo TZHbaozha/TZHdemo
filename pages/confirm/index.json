@@ -1,6 +1,9 @@
 {
   "usingComponents": {
     "t-tick" : "/component/tick/index",
-    "t-round" : "/component/round/index"
+    "t-round" : "/component/round/index",
+    "van-cell": "vant-weapp/cell/index",
+    "van-cell-group": "vant-weapp/cell-group/index",
+    "van-icon": "vant-weapp/icon/index"
   }
 }

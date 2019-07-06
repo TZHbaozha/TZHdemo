@@ -1,0 +1,11 @@
+<view class='container'>
+  <van-cell-group>
+    <van-cell title="头像" size="large">
+      <image src='{{ imageSrc }}'></image>
+    </van-cell>
+    <van-cell title="用户名" value="{{ name }}" size="large" />
+    <van-cell title="性别" value="男" size="large" />
+    <van-cell title="绑定手机" value="156-2224-6840" size="large" />
+  </van-cell-group>
+  <button class='btn' bindtap='aaa'>退出登录</button>
+</view>

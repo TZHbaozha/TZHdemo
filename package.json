@@ -1,0 +1,23 @@
+{
+  "name": "TZHdemo-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TZHbaozha/TZHdemo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TZHbaozha/TZHdemo/issues"
+  },
+  "homepage": "https://github.com/TZHbaozha/TZHdemo#readme",
+  "dependencies": {
+    "vant-weapp": "^0.5.15"
+  }
+}

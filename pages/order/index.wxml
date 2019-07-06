@@ -1,21 +1,14 @@
 <view class="order_prompt">
   <text>查看订单详情</text>
 </view>
-<view class="order_container">
+<view class="order_container" wx:for="{{ data }}">
   <view class="order_left"></view>
   <view class="order_list">
-    <view class="order_num"><text>自提订单 :</text><text>{{ 8907306030 }}</text><text>已完成</text></view>
-      <view class="location"><text>南湖市场店</text><text>343434343434</text></view>
-      <view class="goods_total">原味奶茶等 <text>共{{ 3 }}件商品</text></view>
-      <view class="total_price">￥{{ 66 }}</view>
+    <view class="order_num"><text>自提订单 :</text><text>{{ 8907306030 }}</text><text>{{ data[data.length-1-index].order.state }}</text></view>
+      <view class="location"><text>{{ data[data.length-1-index].order.address }}</text><text>{{ data[data.length-1-index].order.time }}</text></view>
+      <view class="goods_total">{{ data[data.length-1-index].order.goods[0].name }}等... <text>共{{data[data.length-1-index].order.goodSum }}件商品</text></view>
+      <view class="total_price">￥{{ data[data.length-1-index].order.sumPirce }}</view>
   </view>
 </view>
-<view class="order_container">
-  <view class="order_left"></view>
-  <view class="order_list">
-    <view class="order_num"><text>自提订单 :</text><text>{{ 8907306030 }}</text><text>已完成</text></view>
-      <view class="location"><text>南湖市场店</text><text>343434343434</text></view>
-      <view class="goods_total">原味奶茶等 <text>共{{ 3 }}件商品</text></view>
-      <view class="total_price">￥{{ 66 }}</view>
-  </view>
-</view>
+
+

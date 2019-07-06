@@ -1,5 +1,6 @@
 {
 	"description": "项目配置文件",
+	"cloudfunctionRoot": "cloudFunc/",
 	"packOptions": {
 		"ignore": []
 	},
@@ -9,10 +10,11 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
+		"nodeModules": true,
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.1",
+	"libVersion": "2.7.2",
 	"appid": "wx7937fc8f72a03a2b",
 	"projectname": "app",
 	"debugOptions": {

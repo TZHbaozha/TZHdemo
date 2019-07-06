@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "t-tick" : "/component/tick/index"
-  }
+  },
+  "navigationBarTitleText": "购物车"
 }

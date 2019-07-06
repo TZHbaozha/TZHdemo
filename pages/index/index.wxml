@@ -10,15 +10,15 @@
 </scroll-view>
 <view class="content">
   <view class="btn_order" bindtap="bindViewTap">
-    <text>{{ btn_order }}</text>
+    <text>现在下单</text>
     <image src="/images/buy.png"></image>
   </view>
   <view class="rec">
-    <text>{{ rec }}</text>
+    <text>今日推荐</text>
     <image src="/images/rec.png"></image>
   </view>
   <view class="pre">
-    <text>{{ pre }}</text>
+    <text bindtap='aaa'>更多优惠</text>
     <image src="/images/pre.png"></image>
   </view>
 </view>

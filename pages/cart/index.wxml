@@ -19,9 +19,9 @@
                 <text class="cart_price">￥<text>{{ crat_list[index].price * item }}</text></text>
               </view>
               <view class="add_reduce">
-                <view id="reduc_btn" bindtap="reduce_num" data-id="{{ index }}">-</view>
+                <view id="reduc_btn" bindtap="reduce_num" data-id="{{ index }}"><image src='/images/reduc.png'/></view>
                 <view class="num">{{ item }}</view>
-                <view id="add_btn" bindtap="add_num" data-id="{{ index }}">+</view>
+                <view id="add_btn" bindtap="add_num" data-id="{{ index }}"><image src='/images/add.png'/></view>
               </view>
             </view>
           </view>

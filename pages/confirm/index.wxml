@@ -1,73 +1,80 @@
+<view class="container">
+<scroll-view  scroll-y="true" scroll-top="{{ 0 }}" style="height:90%;">
 <view class="title">
-        <view class="lift">自提</view>
-        <view class="make_food">
-            <text class="immediately">立即取餐</text>
-            <view class="time_text"><text>约</text><text>3:00</text><text>后可取</text></view>
-        </view>
+  <view class="lift">自提</view>
+  <view class="make_food">
+    <text class="immediately">立即取餐</text>
+    <view class="time_text"
+      ><text>约</text><text>3:00</text><text>后可取</text></view
+    >
+  </view>
 </view>
 <view class="details">
-    <view class="stores">门店地址</view>
-    <view class="stores_location">
-        <view class="location">
-            <view class="locat">南湖市场店</view>
-            <view class="specific_locat">南湖市场附城镇第九街...</view>
-        </view>
-        <text class="Angle_brackets">></text>
+  <view class="stores">门店地址</view>
+  <view class="stores_location">
+    <view class="location">
+      <view class="locat">南湖市场店</view>
+      <view class="specific_locat">南湖市场附城镇第九街...</view>
     </view>
-    <view class="Packaged_container">
+    <view class="Angle_brackets">
+        <van-icon name="arrow" color='#C8C8C8'/>
+    </view>
+  </view>
+  <view class="Packaged_container">
     <view class="Packaged_meals">
-        <view class="dining">
-            
-            <t-round wx:if="{{ flag }}" bindtap="change"></t-round>
-            <t-tick wx:else bindtap="change" data-id="{{true}}"></t-tick>
-            <text>店内用餐</text>
-        </view>
-        <view class="packaging">
-                
-            <t-tick wx:if="{{flag}}" bindtap="change" data-id="{{true}}"></t-tick>
-            <t-round wx:else bindtap="change"></t-round>
-            <text>打包带走</text>
-        </view>
+      <view class="dining">
+        <t-round wx:if="{{ flag }}" bindtap="change"></t-round>
+        <t-tick wx:else bindtap="change" data-id="{{ true }}"></t-tick>
+        <text>店内用餐</text>
+      </view>
+      <view class="packaging">
+        <t-tick
+          wx:if="{{ flag }}"
+          bindtap="change"
+          data-id="{{ true }}"
+        ></t-tick>
+        <t-round wx:else bindtap="change"></t-round>
+        <text>打包带走</text>
+      </view>
     </view>
-    </view>
-    <view class="order">
-        <view class="informa">订单信息</view>
-        <view class="order_price">
-            <view class="goods_name">
-                <view>原味奶茶</view>
-                <view>大/默认冷饮</view>
-            </view>
-            <view class="num_price">
-                <text>x1</text>
-                <text>￥27</text>
-            </view>
-            
+  </view>
+  <view class="order">
+    <view class="informa">订单信息</view>
+    <view class="order_price" wx:for="{{ crat_list }}">
+        <view class="goods_name">
+          <view>{{ item.name }}</view>
+          <view>大/默认冷饮</view>
         </view>
-    </view>
-    <view class="sum_pricw">
-        <view>
-            <text>合计</text><text>￥27</text>
+        <view class="num_price">
+          <text>x{{ cratArr[index] }}</text>
+          <text>￥{{ quantity_price[index] }}</text>
         </view>
-        
-    </view>
+    </view> 
+  </view>
+  <view class="sum_pricw">
+    <view> <text>合计</text><text>￥{{ total_num }}</text> </view>
+  </view>
 </view>
-<view class="note">
-    <view class="coupons">
-            <text>使用优惠券</text>
-            <text>></text>
-    </view>
-    <view class="requirements">
-            <text>备注要求</text>
-            <text>></text>
-    </view>
+<van-cell
+  is-link
+  title="优惠券"
+  link-type="navigateTo"
+  url=""
+/>
+<van-cell
+  is-link
+  title="备注"
+  link-type="navigateTo"
+  url=""
+/>
+</scroll-view>
 </view>
+
 
 <view class="pay_sum">
-        <view class="prepare">
-            <text>需支付</text>
-            <text>$10.35</text>
-        </view>
-        <view class="pay">去支付</view>
+  <view class="prepare">
+    <text>需支付</text>
+    <text>￥{{ total_num }}</text>
+  </view>
+  <view class="pay" bindtap='pay'>去支付</view>
 </view>
-
-

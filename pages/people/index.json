@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "navigationBarBackgroundColor": "#333",
+  "navigationBarTitleText": "我的",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#f4f4f4",
+  "usingComponents":{
+    "van-icon": "vant-weapp/icon/index"
+  }
 }

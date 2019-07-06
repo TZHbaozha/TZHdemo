@@ -93,14 +93,15 @@ page{
 }
 
 .cart_infor .add_reduce #reduc_btn{
-    width:38rpx;
-    height:38rpx;
+    width:60rpx;
+    height:60rpx;
     margin-right: 17rpx;
     text-align: center;
-    line-height: 35rpx;
-    border:1rpx solid #A13325;
-    border-radius: 50%;
-    color: #A13325;
+    line-height: 37rpx;
+}
+.cart_infor .add_reduce  #reduc_btn  image{
+  width:44rpx;
+  height:44rpx;
 }
 
 .cart_infor .add_reduce .num{
@@ -109,15 +110,15 @@ page{
 }
 
 .cart_infor .add_reduce #add_btn{
-    width:43rpx;
-    height:43rpx;
-    border-radius: 50%;
+    width:60rpx;
+    height:60rpx;
     margin-left: 17rpx;
-    background-color: #89AED6;
     text-align: center;
     line-height: 38rpx;
-    font-size: 40rpx;
-    color:#fff;
+}
+.cart_infor .add_reduce  #add_btn  image{
+  width:48rpx;
+  height:48rpx;
 }
 .settlement{
     display: flex;
@@ -155,4 +156,5 @@ page{
     background-color: #7CA7D2;
     color: #fff;
 }
+
 
